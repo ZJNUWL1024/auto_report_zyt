@@ -1,5 +1,5 @@
 # auto_report_zyt
-战役通打卡
+战役通打卡(gitee地址：https://gitee.com/ZJNUWL1024/auto_report_zyt)
 
 - 需要提前edge webdrive
 - 需要自己改动run.bat和start.bat的路径（相信聪明的你肯定能够搞定）
