@@ -1,0 +1,1 @@
+start cmd /k "schtasks /create /tn auto_report /tr C:\Users\WL1024\PycharmProjects\pythonProject\start.bat /sc DAILY /st 00:30:00&&schtasks /query /tn auto_report"

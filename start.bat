@@ -1,0 +1,1 @@
+start cmd /c "C:\Users\WL1024\PycharmProjects\pythonProject\venv\Scripts\python.exe C:\Users\WL1024\PycharmProjects\pythonProject\main.py"
