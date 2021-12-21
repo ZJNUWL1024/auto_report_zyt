@@ -1,3 +1,5 @@
+### 2021/12/19 迭代内容：定位将默认在学校本部校区
+
 # auto_report_zyt
 战役通打卡(gitee地址：https://gitee.com/ZJNUWL1024/auto_report_zyt)
 
