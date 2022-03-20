@@ -24,25 +24,11 @@ if __name__ == '__main__':
                         )
     start = time.time()
     datas = [{
-        'userName': 'xxxxx',
-        'passwd': 'xxx',
-        'nickName': 'xx'
+        'userName': '202025201112',
+        'passwd': '185216',
+        'nickName': 'WL',
     },
-        {
-            'userName': 'xxxxx',
-            'passwd': 'xxx',
-            'nickName': 'xx' 
-        },
-        {
-            'userName': 'xxxxx',
-            'passwd': 'xxx',
-            'nickName': 'xx' 
-        },
-        {
-            'userName': 'xxxxx',
-            'passwd': 'xxx',
-            'nickName': 'xx' 
-        }]
+    ]
     process(datas)
     end = time.time()
     logging.info("process time : " + str(int(end-start)) + 's')
