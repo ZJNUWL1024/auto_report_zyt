@@ -2,7 +2,7 @@
 
 ### 2021/12/19 更新内容：定位将默认在学校本部校区
 
-# auto_report_zyt
+# auto_fuck_zyt
 战役通打卡(gitee地址：https://gitee.com/ZJNUWL1024/auto_report_zyt)
 
 - 需要提前edge webdrive
