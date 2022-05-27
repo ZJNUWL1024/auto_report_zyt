@@ -24,10 +24,17 @@ if __name__ == '__main__':
                         )
     start = time.time()
     datas = [{
-        'userName': '202025201112',
-        'passwd': '185216',
-        'nickName': 'WL',
+        'userName': 'xxx',
+        'passwd': 'xxx',
+        'nickName': 'WL1024',
+        'location': "浙江省 杭州市 拱墅区"
     },
+        # location缺省 默认打在学校本部
+        {
+            'userName': 'xxx',
+            'passwd': 'xxx',
+            'nickName': 'WL1024',
+        }
     ]
     process(datas)
     end = time.time()
