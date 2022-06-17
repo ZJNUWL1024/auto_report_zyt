@@ -1,6 +1,8 @@
 from selenium import webdriver
 from time import sleep
 import logging
+import encode
+
 
 from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException
 from selenium.webdriver.common.by import By
@@ -13,8 +15,8 @@ def auto_report(data):
     nickName = data.get("nickName")
     location_input = data.get("location")
     nickName = '[' + nickName + ']'
-    path = "/Users/wl1024/tools/edgedriver_mac64/msedgedriver"
-    # path = "D:\\webdriver\\msedgedriver.exe"
+    # path = "/Users/wl1024/tools/edgedriver_mac64/msedgedriver"
+    path = "D:\\webdriver\\msedgedriver.exe"
     bor = webdriver.Edge(path)
     bor.get("http://zyt.zjnu.edu.cn/H5/Login.aspx?op=phone_html5")
     logging.info("=============================" + nickName + " processing" + "=================================")
@@ -41,8 +43,8 @@ def auto_report(data):
         report_start = bor.find_element(by=By.XPATH, value="/html/body/form/div[4]/button[1]")
         report_start.click()
         if location_input is not None:
-            # 杭州拱墅区
-            bor.get("http://zyt.zjnu.edu.cn/H5/ZJSFDX/FillIn.aspx?address=%E6%B5%99%E6%B1%9F%E7%9C%81%E2%9C%B0%E6%9D%AD%E5%B7%9E%E5%B8%82%E2%9C%B0%E6%8B%B1%E5%A2%85%E5%8C%BA")
+            location_encode = encode.parse_code(location_input)
+            bor.get("http://zyt.zjnu.edu.cn/H5/ZJSFDX/FillIn.aspx?"+location_encode)
             loc = bor.find_element(by=By.XPATH, value="/html/body/form/div[15]/div/input")
             loc.send_keys(location_input)
             notInSchool = bor.find_element(by=By.XPATH, value="/html/body/form/div[12]/div[4]/input")
