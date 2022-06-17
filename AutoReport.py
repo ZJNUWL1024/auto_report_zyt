@@ -42,6 +42,7 @@ def auto_report(data):
         # 点击进入详情页
         report_start = bor.find_element(by=By.XPATH, value="/html/body/form/div[4]/button[1]")
         report_start.click()
+        
         if location_input is not None:
             location_encode = encode.parse_code(location_input)
             bor.get("http://zyt.zjnu.edu.cn/H5/ZJSFDX/FillIn.aspx?"+location_encode)
