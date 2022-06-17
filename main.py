@@ -15,7 +15,7 @@ def process(data_arr):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO,  # 控制台打印的日志级别
-                        filename='report.log',
+                        filename='D:\\logs\\report.log',
                         filemode='a',  ##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
                         # a是追加模式，默认如果不写的话，就是追加模式
                         format=
@@ -23,17 +23,23 @@ if __name__ == '__main__':
                         # 日志格式
                         )
     start = time.time()
-    datas = [{
-        'userName': 'xxx',
-        'passwd': 'xxx',
-        'nickName': 'WL1024',
-        'location': "浙江省 杭州市 拱墅区"
-    },
-        # location缺省 默认打在学校本部
+    datas = [
         {
             'userName': 'xxx',
             'passwd': 'xxx',
-            'nickName': 'WL1024',
+            'nickName': 'xx',
+            'location': "浙江省✰杭州市✰拱墅区"
+        },
+        {
+            'userName': 'xxx',
+            'passwd': 'xx',
+            'nickName': 'WJ',
+        },
+        {
+            'userName': 'xxx',
+            'passwd': 'xxx',
+            'nickName': 'xx',
+            'location': "浙江省✰嘉兴市✰南湖区"
         }
     ]
     process(datas)
