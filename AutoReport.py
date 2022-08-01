@@ -47,6 +47,8 @@ def auto_report(data):
             location_encode = encode.parse_code(location_input)
             bor.get("http://zyt.zjnu.edu.cn/H5/ZJSFDX/FillIn.aspx?"+location_encode)
             loc = bor.find_element(by=By.XPATH, value="/html/body/form/div[15]/div/input")
+            if '✰' in location_input:
+                location_input = location_input.replace('✰', ' ')
             loc.send_keys(location_input)
             notInSchool = bor.find_element(by=By.XPATH, value="/html/body/form/div[12]/div[4]/input")
             notInSchool.click()
