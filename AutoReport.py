@@ -1,6 +1,9 @@
 from selenium import webdriver
 from time import sleep
 import logging
+
+from selenium.webdriver.edge.options import Options
+
 import encode
 
 
@@ -15,9 +18,10 @@ def auto_report(data):
     nickName = data.get("nickName")
     location_input = data.get("location")
     nickName = '[' + nickName + ']'
-    # path = "/Users/wl1024/tools/edgedriver_mac64/msedgedriver"
-    path = "D:\\webdriver\\msedgedriver.exe"
-    bor = webdriver.Edge(path)
+    options = Options()
+    options.add_argument("headless")
+    path = "./edgedriver_linux64/msedgedriver"
+    bor = webdriver.Edge(path, options=options)
     bor.get("http://zyt.zjnu.edu.cn/H5/Login.aspx?op=phone_html5")
     logging.info("=============================" + nickName + " processing" + "=================================")
 
